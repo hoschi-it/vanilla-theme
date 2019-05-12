@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php bloginfo('language'); ?>">
 <head>
-    <meta charset="UTF-8">
-    <title>Royal Rangers&reg; Bad Vilbel</title>
-    <link 
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php bloginfo('description'); ?></title>
+    <link
         rel="stylesheet" 
         type="text/css" 
         href="<?php bloginfo('stylesheet_url'); ?>"
@@ -11,8 +11,8 @@
 </head>
 <body>
     <header>
-        <h1>FeG Bad Vilbel</h1>
-        <p>Freie evangelische Gemeinde</p>
+        <h1><?php bloginfo('name');?></h1>
+        <p><?php bloginfo('description');?></p>
     </header>
     <nav id="mainnav">
         <ul>
