@@ -19,7 +19,7 @@
     array(
         'theme_location' => 'header-menu', 
         'container'=>'nav', 
-        'container_class'=>'mainnav'
+        'container_id'=>'mainnav'
     )
 ); 
 ?>
