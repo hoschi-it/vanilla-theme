@@ -14,13 +14,9 @@
         <h1><?php bloginfo('name');?></h1>
         <p><?php bloginfo('description');?></p>
     </header>
-    <nav id="mainnav">
-        <ul>
-            <li>Aktuelles</li>
-            <li>Über uns</li>
-            <li>Gottesdienst</li>
-            <li>Angebote</li>
-            <li>Anfahrt</li>
-            <li>Spenden</li>
-        </ul>
-    </nav>
+<?php wp_nav_menu( array(
+    'theme_location' => 'header_menu', 
+    'container'=>'nav', 
+    'container_class'=>'mainnav'
+)); 
+?>
