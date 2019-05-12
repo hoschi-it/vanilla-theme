@@ -1,0 +1,85 @@
+/*
+ * Theme Name: Vanilla FeG
+ * Theme URI: none
+ * Author: Janina Hosch
+ * Author URI: https://github.com/hoschi-it/
+ * Description: This theme attempts to be as simple as possible while providing all the basic functionality and clean design that one would 
+expect from a theme.
+ * Version: 0.1-dev
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: vanilla-css, css-grid, simple, basic, responsive
+ * Text Domain: vanillafeg
+ *
+ * This theme, like WordPress, is licensed under the GPL.
+ * Use it to make something cool, have fun, and share what you've learned with others.
+ * */
+
+
+
+/**** STYLES start *****************/
+
+body {
+    background-color: lawngreen;
+}
+
+body > * {
+    background-color: white;
+}
+
+header {
+    background-color: inherit;
+}
+
+body > nav {
+    background-color: orange;
+}
+
+/**** STYLES end **************/
+
+/**** GRIDS start ******/
+/****** MAIN PAGE GRID *********/
+
+body {
+    display: grid;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main aside"
+        "main ..."
+        "footer footer"
+    ;
+    grid-gap: 10px;
+}
+
+header {
+    grid-area: header;
+}
+
+nav#mainnav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/************* SUBGRIDS: oneline nav grids **************/
+nav > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 125px);
+    grid-gap:10px;
+}
+
+nav > ul > li {
+    list-style: none;
+}
+
+/**** GRIDS end **************/
