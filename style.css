@@ -21,6 +21,7 @@ expect from a theme.
 
 body {
     background-color: lawngreen;
+    font-family: "Liberation Sans";
 }
 
 body > * {
