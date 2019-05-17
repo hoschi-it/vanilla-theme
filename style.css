@@ -41,46 +41,48 @@ body > nav {
 /**** GRIDS start ******/
 /****** MAIN PAGE GRID *********/
 
-body {
-    display: grid;
-    grid-template-areas: "header header"
-        "nav nav"
-        "main aside"
-        "main ..."
-        "footer footer"
-    ;
-    grid-gap: 10px;
-}
+@supports(display: grid){
+    body {
+        display: grid;
+        grid-template-areas: "header header"
+            "nav nav"
+            "main aside"
+            "main ..."
+            "footer footer"
+        ;
+        grid-gap: 10px;
+    }
 
-header {
-    grid-area: header;
-}
+    header {
+        grid-area: header;
+    }
 
-nav#mainnav {
-    grid-area: nav;
-}
+    nav#mainnav {
+        grid-area: nav;
+    }
 
-main {
-    grid-area: main;
-}
+    main {
+        grid-area: main;
+    }
 
-aside {
-    grid-area: aside;
-}
+    aside {
+        grid-area: aside;
+    }
 
-footer {
-    grid-area: footer;
-}
+    footer {
+        grid-area: footer;
+    }
 
-/************* SUBGRIDS: oneline nav grids **************/
-nav > ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 125px);
-    grid-gap:10px;
-}
+    /************* SUBGRIDS: oneline nav grids **************/
+    nav > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 125px);
+        grid-gap:10px;
+    }
 
-nav > ul > li {
-    list-style: none;
-}
+    nav > ul > li {
+        list-style: none;
+    }
 
+}
 /**** GRIDS end **************/
