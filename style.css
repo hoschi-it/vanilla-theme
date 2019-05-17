@@ -16,14 +16,7 @@ expect from a theme.
  * */
 
 
-
-/**** STYLES start *****************/
-
-body {
-    background-color: lawngreen;
-    font-family: "Liberation Sans";
-}
-
+/***** COLORING start ***************/
 body > * {
     background-color: white;
 }
@@ -32,13 +25,36 @@ header {
     background-color: inherit;
 }
 
-body > nav {
+nav#mainnav {
     background-color: orange;
 }
 
+nav#mainnav li:hover {
+    background-color: black;
+}
+
+nav#mainnav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav#mainnav li:hover a {
+    color: white;
+}
+
+/***** COLORING end *****************/
+
+/**** STYLES start *****************/
+
+body {
+    background-color: lawngreen;
+    font-family: Verdana, Helvetica, "Open Sans", sans-serif;
+}
+
+
 /**** STYLES end **************/
 
-/**** GRIDS start ******/
+/**** GRIDS and boxes start ******/
 /****** MAIN PAGE GRID *********/
 
 @supports(display: grid){
@@ -55,6 +71,11 @@ body > nav {
 
     header {
         grid-area: header;
+    }
+
+    nav ul {
+        padding: 0px;
+        margin: 0px;
     }
 
     nav#mainnav {
@@ -76,12 +97,14 @@ body > nav {
     /************* SUBGRIDS: oneline nav grids **************/
     nav > ul {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 125px);
-        grid-gap:10px;
+        grid-auto-flow: column; 
+        /*grid-template-columns: repeat(auto-fill, minmax(75px, 200px));*/
+        /*grid-gap:10px;*/
     }
 
     nav > ul > li {
         list-style: none;
+        padding: 20px;
     }
 
 }
