@@ -19,32 +19,51 @@ expect from a theme.
 /***** COLORING start ***************/
 
 body {
-    background-color: lawngreen;
+    --prim-bg: white;
+    --prim-bg-con: black;
+    --sec-bg: #d6bdb8;
+    --sec-bg-con: black;
+    
+    --prim-txt: black;
+    --high-txt: #9381ff;
+}
+
+body {
+    background-color: var(--prim-bg-con);
 }
 
 body > * {
-    background-color: white;
+    background-color: var(--prim-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--high-txt);
 }
 
 header {
-    background-color: inherit;
+    background-color: var(--sec-bg);
+    color: var(--sec-bg-con);
 }
 
-nav#mainnav {
-    background-color: #D6BDB8;
+header h1 {
+    color: var(--sec-bg-con);
 }
 
 nav#mainnav li:hover {
-    background-color: black;
+    background-color: var(--sec-bg-con);
 }
 
 nav#mainnav a {
     text-decoration: none;
-    color: black;
+    color: var(--sec-bg-con);
 }
 
 nav#mainnav li:hover a {
-    color: white;
+    color: var(--sec-bg);
+}
+
+footer {
+    background-color: var(--sec-bg);
 }
 
 /***** COLORING end *****************/
@@ -80,7 +99,6 @@ body {
         body {
             grid-template-columns: 3fr 1fr;
             grid-template-areas: "header header"
-                "nav nav"
                 "main aside"
                 "main ..."
                 "footer footer"
@@ -101,7 +119,6 @@ body {
         body {
             grid-template-areas:
                 "header"
-                "nav"
                 "main"
                 "aside"
                 "footer"
@@ -115,10 +132,6 @@ body {
     nav ul {
         padding: 0px;
         margin: 0px;
-    }
-
-    nav#mainnav {
-        grid-area: nav;
     }
 
     main {
