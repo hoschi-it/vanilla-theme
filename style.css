@@ -49,16 +49,13 @@ header h1 {
     color: var(--sec-bg-con);
 }
 
-nav#mainnav li:hover {
-    background-color: var(--sec-bg-con);
-}
-
 nav#mainnav a {
     text-decoration: none;
     color: var(--sec-bg-con);
 }
 
-nav#mainnav li:hover a {
+nav#mainnav a:hover {
+    background-color: var(--sec-bg-con);
     color: var(--sec-bg);
 }
 
@@ -106,13 +103,19 @@ body {
         }
         nav > ul {
             display: grid;
-            grid-auto-flow: column; 
+            grid-auto-flow: column;
         }
 
-        nav > ul > li {
+        nav .menu-item {
+            display: contents;
             list-style: none;
             padding: 20px;
         }
+
+        nav .menu-item a {
+            padding: 20px;
+        }
+
     }
 
     @media screen and (max-width: 699px) {
