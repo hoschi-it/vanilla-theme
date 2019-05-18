@@ -87,12 +87,12 @@ body {
     body {
         display: grid;
         grid-gap: 10px;
-        max-width: 1000px; /* limiting page width */
     }
-    @media screen and (min-width:1000px){
-        body {
-            margin: 0 auto; /* align center if page is limited */
-        }
+
+    /* limiting page width */
+    body {
+        max-width: 1500px;
+        margin: 0 auto; /* align center if page is limited */
     }
 
     @media screen and (min-width: 700px) {
@@ -145,8 +145,6 @@ body {
     footer {
         grid-area: footer;
     }
-
-    /************* SUBGRIDS: oneline nav grids **************/
 
 }
 /**** GRIDS end **************/
