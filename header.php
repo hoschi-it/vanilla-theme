@@ -12,8 +12,10 @@
 </head>
 <body>
     <header>
-        <h1><?php bloginfo('name');?></h1>
-        <p><?php bloginfo('description');?></p>
+        <div class="title">
+            <h1><?php bloginfo('name');?></h1>
+            <p><?php bloginfo('description');?></p>
+        </div>
         <?php wp_nav_menu( 
             array(
                 'theme_location' => 'header-menu', 

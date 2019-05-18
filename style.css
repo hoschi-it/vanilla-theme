@@ -127,6 +127,26 @@ body {
 
     header {
         grid-area: header;
+        display: grid;
+        grid-template-areas: "title"
+            "nav";
+    }
+
+    header .title {
+        justify-self: center;
+        grid-area: title;
+        padding: 20px;
+    }
+
+    header .title h1,
+    header .title p {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    header nav {
+        grid-area: nav;
     }
 
     nav ul {
