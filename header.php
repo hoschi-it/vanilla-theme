@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="<?php bloginfo('language'); ?>">
 <head>
+    <meta name="viewport" content="width=device-width"> 
     <meta charset="<?php bloginfo('charset'); ?>">
     <title><?php bloginfo('name'); ?></title>
     <link
@@ -20,7 +21,7 @@
             array(
                 'theme_location' => 'header-menu', 
                 'container' => 'nav', 
-                'container_id' => 'mainnav'
+                'container_id' => 'mainnav',
             )
         ); ?>
     </header>
