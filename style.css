@@ -36,7 +36,12 @@ body > * {
     background-color: var(--prim-bg);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--high-txt);
 }
 
@@ -92,7 +97,8 @@ body {
         margin: 0 auto; /* align center if page is limited */
     }
 
-    @media screen and (min-width: 700px) {
+    @media screen and
+    (min-width: 700px) {
         body {
             grid-template-columns: 3fr 1fr;
             grid-template-areas: "header header"
@@ -101,6 +107,7 @@ body {
                 "footer footer"
             ;
         }
+
         nav > ul {
             display: grid;
             grid-auto-flow: column;
@@ -118,7 +125,9 @@ body {
 
     }
 
-    @media screen and (max-width: 699px) {
+    @media screen and
+    (max-width: 699px) {
+
         body {
             grid-template-areas:
                 "header"
