@@ -9,6 +9,10 @@
         type="text/css" 
         href="<?php bloginfo('stylesheet_url'); ?>"
         >
+    <script 
+        type="text/javascript" 
+        src="<?php bloginfo('stylesheet_directory');?>/menu.js">
+    </script>
     <?php wp_head(); ?>
 </head>
 <body>
@@ -17,8 +21,28 @@
             'theme_location' => 'header-menu', 
             'container' => 'nav', 
             'container_id' => 'mainnav',
+            'container_class' => 'menu hidden',
         )
     ); ?>
+
+
+    <input id="toggle-menu" type="checkbox"/>
+    <label class="toggle-menu" for="toggle-menu">
+        Menü
+        <svg class="burger" width="86" height="60" viewbox="0 0 150 150">
+            <g stroke-width="12">   
+                <line x1="6" y1="6" x2="80" y2="6"></line>
+                <line x1="6" y1="28" x2="80" y2="28"></line>
+                <line x1="6" y1="50" x2="80" y2="50"> </line>
+            </g>
+        </svg>
+        <svg class="close" width="86" height="60" viewbox="0 0 150 150">
+            <g stroke-width="12">   
+                <line x1="5" y1="5" x2="60" y2="60"></line>
+                <line x1="60" y1="5" x2="5" y2="60"></line>
+            </g>
+        </svg>
+    </label>
     <section class="page">
         <header style="background-color: orange;">
             <div class="title">
@@ -28,23 +52,6 @@
 
 
 
-<input id="toggle-menu" type="checkbox" />
-<label class="toggle-menu" for="toggle-menu">
- <svg class="burger" width="86" height="60" viewbox="0 0 150 150">
-        <g stroke-width="12">   
-            <line x1="6" y1="6" x2="80" y2="6"></line>
-            <line x1="6" y1="28" x2="80" y2="28"></line>
-            <line x1="6" y1="50" x2="80" y2="50"> </line>
-        </g>
-    </svg>
-    <svg class="close" width="86" height="60" viewbox="0 0 150 150">
-        <g stroke-width="12">   
-            <line x1="42" y1="6" x2="42" y2="80"></line>
-            <line x1="6" y1="42" x2="80" y2="42"></line>
-        </g>
-    </svg>
-Menu
-</label>
 
 
         </header>
