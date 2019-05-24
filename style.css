@@ -34,6 +34,7 @@ section.page {
     background-color: var(--prim-bg-con);
 }
 
+
 section.page > * {
     background-color: var(--prim-bg);
 }
@@ -54,6 +55,10 @@ header {
 
 header h1 {
     color: var(--sec-bg-con);
+}
+
+nav#mainnav {
+    background-color: var(--sec-bg);
 }
 
 nav#mainnav a {
@@ -187,15 +192,14 @@ body {
 /**** Overlay MENU start *****/
 /* overlay toggle */
 label.toggle-menu {
-    position: absolute;
     z-index: 1;
 }
 
-input#toggle-menu {
+input#show-menu {
     display: none;
 }
 
-input#toggle-menu:checked ~ label.toggle-menu {
+input#show-menu:checked ~ label.toggle-menu {
     right: 0;
 }
 
@@ -215,7 +219,7 @@ label.toggle-menu {
     stroke: #cccccc;
 }
 
-input#toggle-menu:checked ~ label.toggle-menu .burger {
+input#show-menu:checked ~ label.toggle-menu .burger {
     opacity: 0;
 }
 
@@ -237,35 +241,25 @@ input#toggle-menu:checked ~ label.toggle-menu .burger {
 }
 
 
-input#toggle-menu:checked ~ label.toggle-menu .close {
+input#show-menu:checked ~ label.toggle-menu .close {
     opacity: 1;
 }
 
-input#toggle-menu:checked ~ .menu {
+input#show-menu:checked ~ .menu {
     opacity: 1;
 }
 
-input#toggle-menu:checked ~ .menu div {
+input#show-menu:checked ~ .menu div {
     margin-top: 0px;
 }
 
 /* the overlay */
 
 nav#mainnav.menu {
-    -webkit-transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    color: blue;
-    background-color: yellow;
     text-transform: uppercase;
     font-size: 24px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.menu#mainnav  {
-    margin-top: 50px;
-    -webkit-transition: margin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: margin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hidden {

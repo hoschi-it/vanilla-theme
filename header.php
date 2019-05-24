@@ -26,8 +26,8 @@
     ); ?>
 
 
-    <input id="toggle-menu" type="checkbox"/>
-    <label class="toggle-menu" for="toggle-menu">
+    <input id="show-menu" type="checkbox"/>
+    <label class="toggle-menu" for="show-menu">
         Menü
         <svg class="burger" width="86" height="60" viewbox="0 0 150 150">
             <g stroke-width="12">   

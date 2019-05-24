@@ -1,11 +1,11 @@
 window.onload = function() {
-    var toggler = document.querySelector("#toggle-menu");
+    var show = document.querySelector("#show-menu");
 
-    toggler.onchange = function() {
+    show.onchange = function() {
         var hideclass = "hidden";
         var menu = document.querySelector("#mainnav");
 
-        if(!toggler.checked){
+        if(!show.checked){
             menu.classList.add(hideclass);
         }
         else {
