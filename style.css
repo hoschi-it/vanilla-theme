@@ -4,7 +4,7 @@
  * Author: Janina Hosch
  * Author URI: https://github.com/hoschi-it/
  * Description: This theme attempts to be as simple as possible while providing all the basic functionality and clean design that one would 
-expect from a theme.
+ expect from a theme.
  * Version: 0.1-dev
  * License: GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,16 +23,18 @@ body {
     --prim-bg-con: black;
     --sec-bg: #d6bdb8;
     --sec-bg-con: black;
-    
+
     --prim-txt: black;
     --high-txt: #9381ff;
 }
 
-body {
+
+body,
+section.page {
     background-color: var(--prim-bg-con);
 }
 
-body > * {
+section.page > * {
     background-color: var(--prim-bg);
 }
 
@@ -86,25 +88,25 @@ body {
 
 @supports(display: grid){
 
-    body {
+    section.page {
         display: grid;
         grid-gap: 10px;
     }
 
     /* limiting page width */
-    body {
+    section.page {
         max-width: 1500px;
         margin: 0 auto; /* align center if page is limited */
     }
 
     @media screen and
     (min-width: 700px) {
-        body {
+        section.page {
             grid-template-columns: 3fr 1fr;
             grid-template-areas: "header header"
-                "main aside"
-                "main ..."
-                "footer footer"
+            "main aside"
+            "main ..."
+            "footer footer"
             ;
         }
 
@@ -128,12 +130,12 @@ body {
     @media screen and
     (max-width: 699px) {
 
-        body {
+        section.page {
             grid-template-areas:
-                "header"
-                "main"
-                "aside"
-                "footer"
+            "header"
+            "main"
+            "aside"
+            "footer"
         }
     }
 
@@ -141,7 +143,7 @@ body {
         grid-area: header;
         display: grid;
         grid-template-areas: "title"
-            "nav";
+        "nav";
     }
 
     header .title {
@@ -180,3 +182,82 @@ body {
 
 }
 /**** GRIDS end **************/
+
+
+/**** Overlay MENU start *****/
+
+label.toggle-menu {
+    position: absolute;
+    z-index: 1;
+}
+
+input#toggle-menu {
+    display: none;
+}
+
+input#toggle-menu:checked ~ label.toggle-menu {
+    right: 0;
+}
+
+label.toggle-menu {
+    position: relative;
+    top: 0px;
+    cursor: pointer;
+}
+
+.burger g {
+    stroke: #ffffff;
+    -webkit-transition: stroke 0.25s ease-in-out;
+    transition: stroke 0.25s ease-in-out;
+}
+
+.burger g:hover {
+    stroke: #cccccc;
+}
+
+input#toggle-menu:checked ~ label.toggle-menu .burger {
+    opacity: 0;
+}
+
+.close {
+    position: relative;
+    top: 0px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.close g:hover {
+    stroke: #cccccc;
+}
+
+.close g {
+    stroke: #ffffff;
+    -webkit-transition: stroke 0.25s ease-in-out;
+    transition: stroke 0.25s ease-in-out;
+}
+
+.close line {
+    -webkit-transform-origin: 0%;
+    transform-origin: 0%;
+}
+
+.close g {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+}
+
+input#toggle-menu:checked ~ label.toggle-menu .close {
+    opacity: 1;
+}
+
+input#toggle-menu:checked ~ .menu {
+    opacity: 1;
+}
+
+input#toggle-menu:checked ~ .menu div {
+    margin-top: 0px;
+}
+
+/**** Overlay MENU end *******/
