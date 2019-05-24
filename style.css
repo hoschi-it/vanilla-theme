@@ -81,10 +81,9 @@ footer {
 
 body {
     font-family: Verdana, Helvetica, "Open Sans", sans-serif;
+    width: 95vw;
+    height: 95vh;
 }
-
-
-
 
 /**** STYLES end **************/
 
@@ -114,22 +113,6 @@ body {
             "footer footer"
             ;
         }
-
-        nav > ul {
-            display: grid;
-            grid-auto-flow: column;
-        }
-
-        nav .menu-item {
-            display: contents;
-            list-style: none;
-            padding: 20px;
-        }
-
-        nav .menu-item a {
-            padding: 20px;
-        }
-
     }
 
     @media screen and
@@ -144,16 +127,8 @@ body {
         }
     }
 
-    header {
-        grid-area: header;
-        display: grid;
-        grid-template-areas: "title"
-        "nav";
-    }
-
     header .title {
-        justify-self: center;
-        grid-area: title;
+        text-align: center;
         padding: 20px;
     }
 
@@ -164,13 +139,8 @@ body {
         text-align: center;
     }
 
-    header nav {
-        grid-area: nav;
-    }
-
-    nav ul {
-        padding: 0px;
-        margin: 0px;
+    header {
+        grid-area: header;
     }
 
     main {
@@ -191,87 +161,48 @@ body {
 
 /**** Overlay MENU start *****/
 /* overlay toggle */
-label.toggle-menu {
-    z-index: 1;
-}
 
 input#show-menu {
     display: none;
 }
 
-input#show-menu:checked ~ label.toggle-menu {
-    right: 0;
-}
-
 label.toggle-menu {
     position: relative;
     top: 0px;
+    z-index: 0;
     cursor: pointer;
 }
 
 
-.burger g {
-    stroke: #ffffff;
-    -webkit-transition: stroke 0.25s ease-in-out;
-    transition: stroke 0.25s ease-in-out;
-}
-
-.burger g:hover {
-    stroke: #cccccc;
-}
-
-input#show-menu:checked ~ label.toggle-menu .burger {
-    opacity: 0;
-}
-
-.close {
-    position: relative;
-    z-index: 100;
-    top: 0px;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.close g:hover {
-    stroke: #cccccc;
-}
-
+.burger g,
 .close g {
     stroke: #ffffff;
-    -webkit-transition: stroke 0.25s ease-in-out;
+/*    -webkit-transition: stroke 0.25s ease-in-out;
     transition: stroke 0.25s ease-in-out;
-}
-
-
-input#show-menu:checked ~ label.toggle-menu .close {
-    opacity: 1;
-}
-
-input#show-menu:checked ~ .menu {
-    opacity: 1;
-}
-
-input#show-menu:checked ~ .menu div {
-    margin-top: 0px;
+    */
 }
 
 /* the overlay */
 
 nav#mainnav.menu {
-    position: fixed;
+    position: relative;
     padding: 100px;
     z-index: 2;
-    width: 100vw;
-    height: 100vh;
     font-size: 1.5rem;
 }
 
-nav#mainnav.menu ul li {
-    list-decoration: none;
+nav#mainnav.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#mainnav.menu li {
+    text-align: center;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 
