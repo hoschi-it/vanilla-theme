@@ -209,6 +209,7 @@ label.toggle-menu {
     cursor: pointer;
 }
 
+
 .burger g {
     stroke: #ffffff;
     -webkit-transition: stroke 0.25s ease-in-out;
@@ -225,6 +226,7 @@ input#show-menu:checked ~ label.toggle-menu .burger {
 
 .close {
     position: relative;
+    z-index: 100;
     top: 0px;
     cursor: pointer;
     opacity: 0;
@@ -256,10 +258,16 @@ input#show-menu:checked ~ .menu div {
 /* the overlay */
 
 nav#mainnav.menu {
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    padding: 100px;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.5rem;
+}
+
+nav#mainnav.menu ul li {
+    list-decoration: none;
 }
 
 .hidden {
