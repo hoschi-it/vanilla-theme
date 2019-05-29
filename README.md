@@ -13,6 +13,6 @@ The goal is to use no Framework and build this theme completely from scratch.
 Contributors are very welcome.
 
 - If you have some good ideas, feel free to create an issue.
-- If you want to code along: Feel free to do some stuff and create a pull request.
-- If you hate vanilla projects: This is not a place where you will feel at home.
+- If you want to code along, feel free to do some stuff and create a pull request.
+- If you hate vanilla projects, this is not a place where you will feel at home.
 
