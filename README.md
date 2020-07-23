@@ -1,3 +1,6 @@
+# Moved to Gitlab
+https://gitlab.com/hoschi-it/vanilla-theme
+
 # Vanilla Wordpress Theme
 
 Wordpress theme, written in vanilla HTML, CSS and PHP.
